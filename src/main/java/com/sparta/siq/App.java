@@ -1,6 +1,7 @@
 package com.sparta.siq;
 
 import com.sparta.siq.bbcwebsite.Bbcwebsite;
+import com.sparta.siq.bbcwebsite.seleniumconfig.SeleniumConfig;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,8 +18,9 @@ public class App
     {
 //        chromeDriverTesting();
 //        firefoxDriverTesting();
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\SIqbal\\Documents\\chromedriver_win32\\chromedriver.exe");
-        Bbcwebsite bbcwebsite = new Bbcwebsite(new ChromeDriver());
+
+        //System.setProperty("webdriver.chrome.driver","C:\\Users\\SIqbal\\Documents\\chromedriver_win32\\chromedriver.exe");
+        Bbcwebsite bbcwebsite = new Bbcwebsite(new SeleniumConfig("chrome").getDriver());
         bbcwebsite.homePage().goToHomePage().clickSignInLink();
         bbcwebsite.loginpage().inputUserName("fdfds").inputPassword("fdfsdf");
         bbcwebsite.quitDriver();
@@ -45,8 +47,8 @@ public class App
         System.setProperty("webdriver.gecko.driver","C:\\Users\\SIqbal\\Documents\\geckodriver-v0.24.0-win64\\geckodriver.exe");
         //System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE,"true");
         System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"/dev/null");
-//        DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-//        capabilities.setCapability("marionette",true);
+//       DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+//       capabilities.setCapability("marionette",true);
         WebDriver fireFoxDriver = new FirefoxDriver();
         fireFoxDriver.navigate().to("https://www.bbc.co.uk/news");
         fireFoxDriver.findElement(By.id("idcta-username")).click();

@@ -1,14 +1,13 @@
 package com.sparta.siq.bbcwebsite;
 
-import com.sparta.siq.bbcwebsite.pages.HomePage;
-import com.sparta.siq.bbcwebsite.pages.LoginPage;
+import com.sparta.siq.bbcwebsite.bbcpageobjects.HomePage;
+import com.sparta.siq.bbcwebsite.bbcpageobjects.LoginPage;
 import org.openqa.selenium.WebDriver;
 
 public class Bbcwebsite {
 
 
     private final WebDriver driver;
-
 
     public Bbcwebsite(WebDriver webDriver)
     {

@@ -1,8 +1,7 @@
-package com.sparta.siq.bbcwebsite.pages;
+package com.sparta.siq.bbcwebsite.bbcpageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class HomePage {
 
@@ -11,7 +10,7 @@ public class HomePage {
     private final String homePageURL = "https://www.bbc.co.uk/";
 
     //Attributes of the page
-    private final By signInLink = By.id("idcta-username");
+    private final By signInLink = By.id("idcta-link");
 
     //news
     //sport
